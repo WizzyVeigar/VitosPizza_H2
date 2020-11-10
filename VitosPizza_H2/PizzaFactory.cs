@@ -30,11 +30,14 @@ namespace VitosPizza_H2
         /// <returns>returns a Margarita pizza</returns>
         public Pizza MakeMargarita()
         {
+            Pizza pizza = new Pizza();
+            pizza.PizzaName = "Margarita";
             toppings.Clear();
             toppings.Enqueue(ToppingFactory.Instance.CreateTomatoSauce());
             toppings.Enqueue(ToppingFactory.Instance.CreateCheese());
             toppings.Enqueue(ToppingFactory.Instance.CreateOregano());
-            return new Margarita(toppings);
+            pizza.Toppings = toppings;
+            return pizza;
         }
         /// <summary>
         /// Make a Vesuvio pizza
@@ -42,12 +45,15 @@ namespace VitosPizza_H2
         /// <returns>returns a Vesuvio Pizza</returns>
         public Pizza MakeVesuvio()
         {
+            Pizza pizza = new Pizza();
+            pizza.PizzaName = "Vesuvio";
             toppings.Clear();
             toppings.Enqueue(ToppingFactory.Instance.CreateTomatoSauce());
             toppings.Enqueue(ToppingFactory.Instance.CreateCheese());
             toppings.Enqueue(ToppingFactory.Instance.CreateEgg());
             toppings.Enqueue(ToppingFactory.Instance.CreateBasil());
-            return new Vesuvio(toppings);
+            pizza.Toppings = toppings;
+            return pizza;
         }
         /// <summary>
         /// Make a Anchovy Pizza
@@ -55,12 +61,15 @@ namespace VitosPizza_H2
         /// <returns>returns a Anchovy Pizza</returns>
         public Pizza MakeAnchovyPizza()
         {
+            Pizza pizza = new Pizza();
+            pizza.PizzaName = "Anchovy Pizza";
             toppings.Clear();
             toppings.Enqueue(ToppingFactory.Instance.CreateTomatoSauce());
             toppings.Enqueue(ToppingFactory.Instance.CreateCheese());
             toppings.Enqueue(ToppingFactory.Instance.CreateBasil());
             toppings.Enqueue(ToppingFactory.Instance.CreateAnchovy());
-            return new AnchovyPizza(toppings);
+            pizza.Toppings = toppings;
+            return pizza;
         }
 
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace VitosPizza_H2
 {
-    public class Topping
+    public abstract class Topping
     {
         private string toppingName;
 

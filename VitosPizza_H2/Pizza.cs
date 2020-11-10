@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace VitosPizza_H2
 {
-    public abstract class Pizza
+    public class Pizza
     {
         private StringBuilder builder;
         private Queue<Topping> toppings;
@@ -15,6 +15,15 @@ namespace VitosPizza_H2
             get { return toppings; }
             set { toppings = value; }
         }
+
+        private string pizzaName;
+
+        public string PizzaName
+        {
+            get { return pizzaName; }
+            set { pizzaName = value; }
+        }
+
 
         public Pizza()
         {

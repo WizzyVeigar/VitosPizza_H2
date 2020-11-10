@@ -44,11 +44,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Topping\Anchovy.cs" />
-    <Compile Include="AnchovyPizza.cs" />
     <Compile Include="Topping\Basil.cs" />
     <Compile Include="Topping\Cheese.cs" />
     <Compile Include="Topping\Egg.cs" />
-    <Compile Include="Margarita.cs" />
     <Compile Include="Topping\Oregano.cs" />
     <Compile Include="Pizza.cs" />
     <Compile Include="PizzaFactory.cs" />
@@ -57,7 +55,6 @@
     <Compile Include="Topping\TomatoSauce.cs" />
     <Compile Include="Topping\Topping.cs" />
     <Compile Include="ToppingFactory.cs" />
-    <Compile Include="Vesuvio.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
