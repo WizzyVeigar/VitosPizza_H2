@@ -30,9 +30,10 @@ namespace VitosPizza_H2
             Toppings = new Queue<Topping>();
         }
 
-        public Pizza(Queue<Topping> toppings) : this()
+        public Pizza(Queue<Topping> toppings, string name) : this()
         {
             Toppings = toppings;
+            PizzaName = name;
         }
 
         public override string ToString()

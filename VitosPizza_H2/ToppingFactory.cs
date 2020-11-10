@@ -8,6 +8,16 @@ namespace VitosPizza_H2
 {
     class ToppingFactory
     {
+
+        private Queue<Topping> toppings;
+
+        public Queue<Topping> Toppings
+        {
+            get { return toppings; }
+            private set { toppings = value; }
+        }
+
+
         private static ToppingFactory instance;
         public static ToppingFactory Instance
         {
@@ -22,34 +32,34 @@ namespace VitosPizza_H2
         }
 
 
-        public Topping CreateTomatoSauce()
+        public void AddTomatoSauce()
         {
-            return new TomatoSauce();
+            Toppings.Enqueue(new Topping("TomatoSauce", Flavor.Bitter));
         }
 
-        public Topping CreateOregano()
+        public void AddOregano()
         {
-            return new Oregano();
+            Toppings.Enqueue(new Topping("Oregano", Flavor.Sour));
         }
 
-        public Topping CreateCheese()
+        public void AddCheese()
         {
-            return new Cheese();
+            Toppings.Enqueue(new Topping("Cheese", Flavor.Umami));
         }
 
-        public Topping CreateEgg()
+        public void AddEgg()
         {
-            return new Egg();
+            Toppings.Enqueue(new Topping("Egg", Flavor.Sweet));
         }
 
-        public Topping CreateBasil()
+        public void AddBasil()
         {
-            return new Basil();
+            Toppings.Enqueue(new Topping("Basil", Flavor.Sweet));
         }
 
-        internal Topping CreateAnchovy()
+        public void AddAnchovy()
         {
-            return new Anchovy();
+            Toppings.Enqueue(new Topping("Anchovy", Flavor.Bitter));
         }
     }
 }

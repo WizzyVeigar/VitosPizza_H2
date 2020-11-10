@@ -43,21 +43,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Topping\Anchovy.cs" />
-    <Compile Include="Topping\Basil.cs" />
-    <Compile Include="Topping\Cheese.cs" />
-    <Compile Include="Topping\Egg.cs" />
-    <Compile Include="Topping\Oregano.cs" />
     <Compile Include="Pizza.cs" />
     <Compile Include="PizzaFactory.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Topping\TomatoSauce.cs" />
-    <Compile Include="Topping\Topping.cs" />
+    <Compile Include="Topping.cs" />
     <Compile Include="ToppingFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UML\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

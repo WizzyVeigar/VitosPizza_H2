@@ -9,8 +9,6 @@ namespace VitosPizza_H2
 {
     class PizzaFactory
     {
-        Queue<Topping> toppings = new Queue<Topping>();
-        
         private static PizzaFactory instance;
         public static PizzaFactory Instance
         {
@@ -30,14 +28,11 @@ namespace VitosPizza_H2
         /// <returns>returns a Margarita pizza</returns>
         public Pizza MakeMargarita()
         {
-            Pizza pizza = new Pizza();
-            pizza.PizzaName = "Margarita";
-            toppings.Clear();
-            toppings.Enqueue(ToppingFactory.Instance.CreateTomatoSauce());
-            toppings.Enqueue(ToppingFactory.Instance.CreateCheese());
-            toppings.Enqueue(ToppingFactory.Instance.CreateOregano());
-            pizza.Toppings = toppings;
-            return pizza;
+            ToppingFactory.Instance.Toppings.Clear();
+            ToppingFactory.Instance.AddTomatoSauce();
+            ToppingFactory.Instance.AddCheese();
+            ToppingFactory.Instance.AddOregano();
+            return new Pizza(ToppingFactory.Instance.Toppings, "Margarita");
         }
         /// <summary>
         /// Make a Vesuvio pizza
@@ -45,15 +40,12 @@ namespace VitosPizza_H2
         /// <returns>returns a Vesuvio Pizza</returns>
         public Pizza MakeVesuvio()
         {
-            Pizza pizza = new Pizza();
-            pizza.PizzaName = "Vesuvio";
-            toppings.Clear();
-            toppings.Enqueue(ToppingFactory.Instance.CreateTomatoSauce());
-            toppings.Enqueue(ToppingFactory.Instance.CreateCheese());
-            toppings.Enqueue(ToppingFactory.Instance.CreateEgg());
-            toppings.Enqueue(ToppingFactory.Instance.CreateBasil());
-            pizza.Toppings = toppings;
-            return pizza;
+            ToppingFactory.Instance.Toppings.Clear();
+            ToppingFactory.Instance.AddTomatoSauce();
+            ToppingFactory.Instance.AddCheese();
+            ToppingFactory.Instance.AddEgg();
+            ToppingFactory.Instance.AddBasil();
+            return new Pizza(ToppingFactory.Instance.Toppings, "Vesuvio");
         }
         /// <summary>
         /// Make a Anchovy Pizza
@@ -61,17 +53,12 @@ namespace VitosPizza_H2
         /// <returns>returns a Anchovy Pizza</returns>
         public Pizza MakeAnchovyPizza()
         {
-            Pizza pizza = new Pizza();
-            pizza.PizzaName = "Anchovy Pizza";
-            toppings.Clear();
-            toppings.Enqueue(ToppingFactory.Instance.CreateTomatoSauce());
-            toppings.Enqueue(ToppingFactory.Instance.CreateCheese());
-            toppings.Enqueue(ToppingFactory.Instance.CreateBasil());
-            toppings.Enqueue(ToppingFactory.Instance.CreateAnchovy());
-            pizza.Toppings = toppings;
-            return pizza;
+            ToppingFactory.Instance.Toppings.Clear();
+            ToppingFactory.Instance.AddTomatoSauce();
+            ToppingFactory.Instance.AddCheese();
+            ToppingFactory.Instance.AddAnchovy();
+            ToppingFactory.Instance.AddBasil();
+            return new Pizza(ToppingFactory.Instance.Toppings, "Anchovy Pizza");
         }
-
-
     }
 }
